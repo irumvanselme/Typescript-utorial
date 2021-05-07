@@ -18,8 +18,9 @@ class Department {
     }
 }
 class ITDepartment extends Department {
-    constructor() {
-        super(...arguments);
+    constructor(id, location) {
+        super(id, "IT Department");
+        this.location = location;
         this.computers = [];
     }
     addComputer(computer) {
@@ -28,11 +29,18 @@ class ITDepartment extends Department {
     getDetails() {
         console.log(this.computers);
     }
+    describe() {
+        console.log("Department id   : " + this.id);
+        console.log("Department name : " + this.name);
+        console.log("Department location : " + this.location);
+    }
 }
 var myDepartment = new Department(1, "Humman Resource");
-var kabezaDep = new ITDepartment(2, "Kabeza Department");
+var kabezaDep = new ITDepartment(2, "Kabeza");
+kabezaDep.addEmployee("Mugabo");
 kabezaDep.addComputer("Comp 1");
 kabezaDep.addComputer("Comp 2");
 kabezaDep.addComputer("Comp 3");
 kabezaDep.describe();
+kabezaDep.printEmployeesInformation();
 kabezaDep.getDetails();

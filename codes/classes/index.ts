@@ -6,16 +6,16 @@ class Department {
         this.name = name;
     }
 
-    addEmployee(employee: string) {
+    addEmployee(employee: string): void {
         this.employees.push(employee);
     }
 
-    printEmployeesInformation() {
+    printEmployeesInformation(): void {
         console.log(this.employees.length);
         console.log(this.employees);
     }
 
-    describe() {
+    describe(): void {
         console.log("Department : " + this.name);
     }
 }

@@ -1,2 +1,7 @@
 const names: Array<string> = ["irumva", "habumugisha", "anselme"];
-console.log(names[0]);
+
+function addThem<T extends string | number>(a: T, b: T) {
+    return a + " " + b;
+}
+
+console.log(addThem<number>(5, 2));

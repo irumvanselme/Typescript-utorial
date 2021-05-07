@@ -9,3 +9,7 @@ They are user defined types and predefined types
 3. Boolean
 
 ##
+
+1. Objects
+1. Array
+1. Tuple

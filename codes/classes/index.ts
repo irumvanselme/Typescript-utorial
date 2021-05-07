@@ -1,10 +1,7 @@
 class Department {
-    private name: string;
     private employees: string[] = [];
 
-    constructor(name: string) {
-        this.name = name;
-    }
+    constructor(private readonly id: number, private name: string) {}
 
     addEmployee(employee: string): void {
         this.employees.push(employee);
@@ -16,11 +13,12 @@ class Department {
     }
 
     describe(): void {
-        console.log("Department : " + this.name);
+        console.log("Department id   : " + this.id);
+        console.log("Department name : " + this.name);
     }
 }
 
-var myDepartment = new Department("Humman Resource");
+var myDepartment = new Department(1, "Humman Resource");
 myDepartment.describe();
 
 myDepartment.addEmployee("Kalisa");

@@ -18,11 +18,24 @@ class Department {
     }
 }
 
+class ITDepartment extends Department {
+    private computers: string[] = [];
+
+    addComputer(computer: string) {
+        this.computers.push(computer);
+    }
+
+    getDetails() {
+        console.log(this.computers);
+    }
+}
+
 var myDepartment = new Department(1, "Humman Resource");
-myDepartment.describe();
 
-myDepartment.addEmployee("Kalisa");
-myDepartment.addEmployee("Augustin");
-myDepartment.addEmployee("Rugaba");
+var kabezaDep = new ITDepartment(2, "Kabeza Department");
+kabezaDep.addComputer("Comp 1");
+kabezaDep.addComputer("Comp 2");
+kabezaDep.addComputer("Comp 3");
 
-myDepartment.printEmployeesInformation();
+kabezaDep.describe();
+kabezaDep.getDetails();

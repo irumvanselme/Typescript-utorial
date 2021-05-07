@@ -1,7 +1,7 @@
-type MyPoint = {
+interface MyPoint {
     x: number;
     y: number;
-};
+}
 
 function getMagnitude(point: MyPoint): number {
     return point.x * point.y;

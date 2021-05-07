@@ -2,7 +2,7 @@
 function getMagnitude(point) {
     return point.x * point.y;
 }
-var myPoint = {
+let myPoint = {
     x: 10,
     y: 30,
 };

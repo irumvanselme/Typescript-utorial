@@ -10,7 +10,6 @@ function getMagnitude(point: Point): number {
 let myPoint: Point = {
     x: 10,
     y: 30,
-    _x: 45,
 };
 
 console.log(getMagnitude(myPoint));

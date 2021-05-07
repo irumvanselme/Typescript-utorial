@@ -15,7 +15,7 @@ class Department {
         console.log("Department : " + this.name);
     }
 }
-var myDepartment = new Department("Humman Resources");
+var myDepartment = new Department("Humman Resource");
 myDepartment.describe();
 myDepartment.addEmployee("Kalisa");
 myDepartment.addEmployee("Augustin");

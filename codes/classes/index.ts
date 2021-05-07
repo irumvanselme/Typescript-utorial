@@ -44,12 +44,44 @@ var myDepartment = new Department(1, "Humman Resource");
 
 var kabezaDep = new ITDepartment(2, "Kabeza");
 
-kabezaDep.addEmployee("Mugabo");
+// kabezaDep.addEmployee("Mugabo");
 
-kabezaDep.addComputer("Comp 1");
-kabezaDep.addComputer("Comp 2");
-kabezaDep.addComputer("Comp 3");
+// kabezaDep.addComputer("Comp 1");
+// kabezaDep.addComputer("Comp 2");
+// kabezaDep.addComputer("Comp 3");
 
-kabezaDep.describe();
-kabezaDep.printEmployeesInformation();
-kabezaDep.getDetails();
+// kabezaDep.describe();
+// kabezaDep.printEmployeesInformation();
+// kabezaDep.getDetails();
+
+class Point3D {
+    constructor(private _x: number, private _y: number, private _z: number) {}
+
+    set x(x: number) {
+        this._x = x;
+    }
+
+    get x() {
+        return this._x;
+    }
+
+    set y(y: number) {
+        this._y = y;
+    }
+
+    get y() {
+        return this._y;
+    }
+
+    set z(z: number) {
+        this._z = z;
+    }
+
+    get z() {
+        return this._z;
+    }
+}
+
+const my3DPoint = new Point3D(1, 5, 6);
+my3DPoint.x = 10;
+console.log(my3DPoint.x);

@@ -1,16 +1,15 @@
-interface Point {
+type MyPoint = {
     x: number;
     y: number;
-}
+};
 
-function getMagnitude(point: Point): number {
+function getMagnitude(point: MyPoint): number {
     return point.x * point.y;
 }
 
-let myPoint: Point = {
+let myPoint: MyPoint = {
     x: 10,
     y: 30,
-    _x: 45,
 };
 
 console.log(getMagnitude(myPoint));

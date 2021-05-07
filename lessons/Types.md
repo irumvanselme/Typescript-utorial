@@ -13,3 +13,4 @@ They are user defined types and predefined types
 1. Objects
 1. Array
 1. Tuple
+1. Enums

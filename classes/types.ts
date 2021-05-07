@@ -19,3 +19,9 @@ const user: {
 console.log(user.nick_name);
 
 const favorites: string[] = ["name"];
+
+enum roles {
+    ADMIN = "ADMIN",
+    SALES_MANAGER = "ADMIN",
+    SHIPPER = "ADMIN",
+}

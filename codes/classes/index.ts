@@ -17,9 +17,16 @@ abstract class Department {
 
 class ITDepartment extends Department {
     private computers: string[] = [];
+    private static instance: ITDepartment;
 
-    constructor(id: number, private location: string) {
+    private constructor(id: number, private location: string) {
         super(id, "IT Department");
+    }
+
+    static getInstance() {
+        if (this.instance) return this.instance;
+        this.instance = new ITDepartment(10, "Mukamira");
+        return this.instance;
     }
 
     addComputer(computer: string) {
@@ -37,7 +44,7 @@ class ITDepartment extends Department {
     }
 }
 
-var kabezaDep = new ITDepartment(2, "Kabeza");
+var kabezaDep = ITDepartment.getInstance();
 
 kabezaDep.addEmployee("Mugabo");
 

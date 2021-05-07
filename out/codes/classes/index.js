@@ -19,6 +19,12 @@ class ITDepartment extends Department {
         this.location = location;
         this.computers = [];
     }
+    static getInstance() {
+        if (this.instance)
+            return this.instance;
+        this.instance = new ITDepartment(10, "Mukamira");
+        return this.instance;
+    }
     addComputer(computer) {
         this.computers.push(computer);
     }
@@ -31,7 +37,7 @@ class ITDepartment extends Department {
         console.log("Department location : " + this.location);
     }
 }
-var kabezaDep = new ITDepartment(2, "Kabeza");
+var kabezaDep = ITDepartment.getInstance();
 kabezaDep.addEmployee("Mugabo");
 kabezaDep.addComputer("Comp 1");
 kabezaDep.addComputer("Comp 2");
